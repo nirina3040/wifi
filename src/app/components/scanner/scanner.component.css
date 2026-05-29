@@ -1,0 +1,206 @@
+.scanner-container {
+  min-height: calc(100vh - 56px);
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.upload-zone {
+  border: 3px dashed #dee2e6;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: white;
+}
+
+.upload-zone:hover {
+  border-color: #0d6efd;
+  background: #f8f9fa;
+}
+
+.upload-zone.drag-over {
+  border-color: #0d6efd;
+  background: #e7f1ff;
+  transform: scale(1.01);
+}
+
+.upload-icon i {
+  font-size: 4rem;
+  color: #0d6efd;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.preview-container {
+  text-align: center;
+}
+
+.preview-badge {
+  position: relative;
+  top: -10px;
+}
+
+.preview-image {
+  max-width: 100%;
+  max-height: 400px;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.result-card {
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.info-card {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 1rem;
+}
+
+.info-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+}
+
+.info-value {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.password-input {
+  font-family: 'Courier New', monospace;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.password-strength {
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.password-strength:hover {
+  opacity: 1;
+}
+
+.instructions-box {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 15px;
+  padding: 1.5rem;
+  color: white;
+}
+
+.step-card {
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: white;
+  color: #667eea;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0 auto 0.5rem;
+}
+
+.step-text {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.guide-card {
+  background: white;
+  border-radius: 15px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.guide-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .upload-zone {
+    padding: 1rem;
+  }
+  
+  .info-value {
+    font-size: 1rem;
+  }
+  
+  .step-card {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
